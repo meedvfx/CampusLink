@@ -1,14 +1,6 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/AppShell";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
 
 export const viewport = {
   width: "device-width",
@@ -18,13 +10,13 @@ export const viewport = {
 export const metadata: Metadata = {
   title: "CampusLink France — Le guide de référence des étudiants internationaux",
   description:
-    "Plateforme publique pour les étudiants internationaux en France. Formalités administratives (VLS-TS, CPAM, CAF), recherche de logement, santé, jobs étudiants, carte interactive et initiatives écologiques.",
+    "Plateforme publique pour les étudiants internationaux en France. Formalités administratives (VLS-TS, CPAM, CAF), recherche de logement, santé, jobs étudiants et transition écologique.",
   keywords: [
     "étudiants internationaux France",
     "visa VLS-TS validation",
     "CPAM Ameli étudiant étranger",
     "CAF APL simulateur",
-    "logement CROUS Nantes",
+    "logement CROUS",
     "garantie Visale",
     "jobs étudiants 964h",
     "vie étudiante France",
@@ -49,14 +41,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" className={plusJakartaSans.variable}>
+    <html lang="fr">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
       </head>
-      <body className="bg-surface font-sans text-on-surface antialiased">
+      <body className="bg-slate-50 font-sans text-slate-900 antialiased">
         <AppShell>{children}</AppShell>
       </body>
     </html>

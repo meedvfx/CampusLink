@@ -92,3 +92,16 @@ CampusLink/
 ├── tsconfig.json               # Configuration TypeScript
 └── package.json                # Dépendances & scripts
 ```
+
+## Current Limitations
+
+- **Frontend uniquement** : Aucun compte utilisateur, ni authentification, ni stockage persistant côté serveur. L'état des cases à cocher (ex: pièces justificatives) est conservé uniquement pendant la session locale.
+- **Orientation officielle** : Le site ne remplace pas les services consulaires ou préfectoraux et renvoie systématiquement vers les téléservices de l'État français (ANEF, Ameli, CAF).
+- **Données localisées** : Bien que les démarches soient nationales, certains exemples pratiques (collectes, associations) sont basés sur des métropoles universitaires représentatives.
+
+## Future Improvements
+
+- **Internationalisation multilingue (i18n)** : Ajout d'une version intégrale en anglais, espagnol et arabe pour les primo-arrivants non francophones.
+- **Mode hors-ligne PWA** : Possibilité de consulter les guides et listes de contrôle sans connexion internet.
+- **Export PDF personnalisé** : Génération d'une check-list récapitulative des documents à emporter avant le départ.
+- **Extension multi-villes** : Filtres enrichis selon l'académie ou métropole d'affectation (Lyon, Toulouse, Lille, Bordeaux, etc.).
