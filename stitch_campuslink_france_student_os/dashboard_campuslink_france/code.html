@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed-dim":"#ffb599","on-tertiary-fixed":"#370e00","surface-container":"#eaedff","secondary":"#006c4a","inverse-primary":"#b4c5ff","on-error-container":"#93000a","on-primary-fixed-variant":"#003ea8","surface-container-lowest":"#ffffff","surface-bright":"#faf8ff","surface-variant":"#dae2fd","primary-fixed":"#dbe1ff","primary-fixed-dim":"#b4c5ff","on-primary-fixed":"#00174b","tertiary-fixed":"#ffdbce","secondary-fixed":"#85f8c4","tertiary-container":"#c04400","on-secondary":"#ffffff","surface-tint":"#0053db","surface-container-high":"#e2e7ff","on-primary-container":"#eeefff","on-background":"#131b2e","surface-container-low":"#f2f3ff","secondary-container":"#82f5c1","error":"#ba1a1a","on-surface":"#131b2e","on-surface-variant":"#434655","error-container":"#ffdad6","primary":"#004ac6","outline-variant":"#c3c6d7","on-tertiary-container":"#ffede7","on-error":"#ffffff","inverse-on-surface":"#eef0ff","on-secondary-container":"#00714e","on-secondary-fixed":"#002114","inverse-surface":"#283044","on-secondary-fixed-variant":"#005137","surface-container-highest":"#dae2fd","outline":"#737686","on-primary":"#ffffff","tertiary":"#973400","surface-dim":"#d2d9f4","on-tertiary":"#ffffff","secondary-fixed-dim":"#68dba9","on-tertiary-fixed-variant":"#7f2b00","surface":"#faf8ff","background":"#faf8ff","primary-container":"#2563eb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-xl":"2rem","margin-lg":"3rem","gutter-lg":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin":"1.5rem","space-md":"1rem","margin-sm":"1rem","gutter":"1.5rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1.0625rem",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"1.35","letterSpacing":"-0.015em","fontWeight":"700"}],"display-mobile":["2.25rem",{"lineHeight":"1.2","letterSpacing":"-0.025em","fontWeight":"800"}],"label-md":["0.875rem",{"lineHeight":"1.2","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"600"}],"display":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg-mobile":["1.625rem",{"lineHeight":"1.3","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["0.8125rem",{"lineHeight":"1.5","letterSpacing":"0.005em","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.45","letterSpacing":"-0.005em","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.55","letterSpacing":"0","fontWeight":"400"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="CampusLink France Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VeW8mjTLt_yp4kuF8ydlaGh4U8xAPZSJW1FRlp-_57LwjSMqulfhMmQZ3PkDWxlpkH2z3nWGNuzX3aD7h0j9QrtmXMuVaQHpJkD1fG_Q62xV2IqEixXPAoq4imfkqKCNGe--TkdQnPX40gdznxlI6ZFfY1INy1er6dcPPkxfzFgoBfUC6TFZ_DsT5dBLK_FxzmEod3seslMVeWCUe_PYYoMu3XYiJHZy1Ndl1-F-zbYjnHSh-R9FVAoSo"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">CampusLink</span><span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">France</span></div></div><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Étudiant OS</span></div><nav class="flex flex-col px-space-md gap-space-xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-xl transition-colors bg-primary-container text-on-primary-container font-bold" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="my-procedures" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-md text-label-md">My Procedures</span></div><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">3 pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="housing" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">home_work</span><span class="font-label-md text-label-md">Housing</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="health-social" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">medical_services</span><span class="font-label-md text-label-md">Health &amp; Social</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="money-caf" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Money &amp; CAF</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="jobs-internships" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">work</span><span class="font-label-md text-label-md">Jobs &amp; Internships</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="studies" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-md text-label-md">Studies</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="explore-map" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-md text-label-md">Explore Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="eco-impact" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">eco</span><span class="font-label-md text-label-md">Eco &amp; Impact</span></div><span class="w-2 h-2 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="community" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">diversity_3</span><span class="font-label-md text-label-md">Community</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="student-marketplace" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md text-label-md">Student Marketplace</span></div></a><div class="my-space-xs pt-space-xs"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" data-path="ask-campuslink-ai" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span><span class="font-label-md text-label-md font-bold">Ask CampusLink AI</span></div><span class="material-symbols-outlined text-[16px]">chevron_right</span></a></div></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low/60 rounded-xl m-space-md"><div class="flex items-center gap-space-sm"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusGHVb3piZKk0cwc0DB26_1_kD0mN3uGhEfC2Sm-s73GilFQosW_ffV15v2m5cpUosIUjgkcqivQBbtoqW7de_yZfBh2apABlXwNwdNqf0k8SaayPeldo3TDQJ7LI5iZVg_538betwEUVXXP7Bsu1diLfBcdU53ocB7cm3AvJ9iM9Wl2s3cBlFmcuZQXYMCS6zLa0b4wXFDpRJAUieXAfSnKctmpOKh30-5KkzP5z5wZIsLn-rXIA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface truncate">Mohamed B.</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Univ. de Nantes • M1 CS</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs"><a class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-error text-on-error font-label-sm text-[9px] flex items-center justify-center font-bold">2</span></a><a class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span></a></div><div class="flex items-center bg-surface-container-highest px-space-xs py-0.5 rounded-lg"><button class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary font-bold shadow-[0_1px_2px_rgba(0,0,0,0.05)]">FR</button><span class="text-outline text-[10px] mx-1">|</span><button class="px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">EN</button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="Search procedures, CROUS, CAF, metro, recycling..." type="text"/><kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-bold">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:bg-surface-container-low transition-colors"><span class="font-label-md text-label-md text-on-surface">📍 Nantes, France</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></button><div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container text-primary font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[16px]">verified</span><span class="font-bold">Visa Valid: 284 days left</span></div><a class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-error-container text-on-error-container hover:opacity-90 transition-opacity" data-path="emergency-services" href="#"><span class="material-symbols-outlined text-[16px]">emergency</span><span class="font-label-sm text-label-sm font-bold">Urgence 112/15</span></a><button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_12px_rgba(37,99,235,0.2)]"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span class="font-label-md text-label-md font-bold">Ask AI</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusGHVb3piZKk0cwc0DB26_1_kD0mN3uGhEfC2Sm-s73GilFQosW_ffV15v2m5cpUosIUjgkcqivQBbtoqW7de_yZfBh2apABlXwNwdNqf0k8SaayPeldo3TDQJ7LI5iZVg_538betwEUVXXP7Bsu1diLfBcdU53ocB7cm3AvJ9iM9Wl2s3cBlFmcuZQXYMCS6zLa0b4wXFDpRJAUieXAfSnKctmpOKh30-5KkzP5z5wZIsLn-rXIA"/></div></header><main class="relative pt-16 bg-surface w-full px-space-xl py-space-lg"><div class="flex flex-col w-full gap-space-xl pb-16">
+<!-- Welcome Banner & Student Status Bar -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<span>Mercredi, 23 Octobre 2024</span>
+<span>•</span>
+<span class="flex items-center gap-1 text-primary font-bold">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+            Nantes, France — Campus Lombarderie
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-0.5">
+          Welcome back, Mohamed <span class="inline-block animate-pulse">👋</span>
+</h1>
+</div>
+<!-- Quick Action Pills -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-primary text-on-primary font-label-md text-label-md shadow-sm hover:bg-on-primary-fixed-variant transition-all" id="btn-quick-ai">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+<span>Ask AI Assistant</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined text-[18px] text-primary">document_scanner</span>
+<span>Scan Document</span>
+</button>
+<a class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-error font-label-md text-label-md shadow-sm hover:bg-error-container/40 transition-all" data-path="emergency-services" href="#">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span>Emergency Contacts</span>
+</a>
+</div>
+</div>
+<!-- Profile Summary Ribbon -->
+<div class="flex flex-wrap items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">school</span>
+<span class="font-label-md text-label-md font-semibold">Master 1 Informatique</span>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
+<span class="font-label-md text-label-md">Status: <strong class="text-secondary font-bold">Régulier</strong> (VLS-TS Étudiant)</span>
+</div>
+<div class="flex items-center gap-3 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container text-[18px]">account_circle</span>
+<span class="font-label-md text-label-md">Profile: <strong class="font-bold">85% Completed</strong></span>
+<div class="w-16 h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div class="ml-auto hidden xl:flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm px-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Synced with FranceConnect API</span>
+</div>
+</div>
+</section>
+<!-- Urgent Alert Bar (2 high-priority action cards) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Card 1: CAF missing document -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-tertiary-fixed/30 pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+            Critical Action • CAF APL
+          </span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold bg-tertiary-fixed/40 px-2 py-0.5 rounded">4 days left</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mt-space-sm font-bold">Attestation de Loyer missing</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Your CROUS residence manager signed your certificate. Upload it now to unlock your estimated €182/month allowance.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-sm">
+<label class="flex-1 cursor-pointer flex items-center justify-center gap-2 px-space-md py-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">cloud_upload</span>
+<span>Upload Attestation (PDF/JPG)</span>
+<input accept=".pdf,.jpg,.png" class="hidden" type="file"/>
+</label>
+<button class="p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="View details">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Campus Health Checkup -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 rounded-full bg-secondary-fixed/30 pointer-events-none"></div>
+<div>
+<div class="flex items-center justify-between gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">medical_services</span>
+            Santé Étudiante (SSU)
+          </span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">100% Free • Mandatory</span>
+</div>
+<h2 class="font-title-md text-title-md text-on-surface mt-space-sm font-bold">International Student Health Checkup</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Bilan de santé préventif at Pôle Santé Lombarderie (Building 18). Free doctor checkup, eye test &amp; mental well-being support.
+        </p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center gap-space-sm">
+<button class="flex-1 flex items-center justify-center gap-2 px-space-md py-2.5 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md hover:opacity-95 shadow-sm transition-opacity">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span>Book Slot at Pôle Lombarderie</span>
+</button>
+<button class="p-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface-variant transition-colors" title="Directions">
+<span class="material-symbols-outlined text-[18px]">directions_walk</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Master Progress Card: My France Setup (80% Complete) -->
+<section class="bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-2xl shadow-sm flex flex-col gap-space-lg">
+<!-- Header with segmented bar & gauge -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1 max-w-xl">
+<div class="flex items-center gap-space-xs">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">Master Roadmap</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Academic Year 2024 / 2025</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+          France Setup — 80% Complete
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          7 key integration milestones to secure your legal stay, housing benefits, and healthcare in France.
+        </p>
+</div>
+<!-- Segmented Bar Visualization -->
+<div class="flex flex-col items-start lg:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">of 7 completed or in review</span>
+</div>
+<div class="flex items-center gap-1.5 w-72">
+<div class="h-2.5 flex-1 rounded-full bg-secondary" title="Done: Inscription Universitaire"></div>
+<div class="h-2.5 flex-1 rounded-full bg-secondary" title="Done: CVEC"></div>
+<div class="h-2.5 flex-1 rounded-full bg-secondary" title="Done: Housing Bail"></div>
+<div class="h-2.5 flex-1 rounded-full bg-tertiary-container animate-pulse" title="In Review: CPAM Ameli"></div>
+<div class="h-2.5 flex-1 rounded-full bg-tertiary-container" title="In Review: CAF APL"></div>
+<div class="h-2.5 flex-1 rounded-full bg-primary" title="In Progress: VLS-TS Validation"></div>
+<div class="h-2.5 flex-1 rounded-full bg-surface-container-high" title="Upcoming: Tan Pass"></div>
+</div>
+<div class="flex items-center gap-3 font-label-sm text-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> 3 Done</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-tertiary-container"></span> 2 Urgent</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-primary"></span> 1 In Progress</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-surface-container-high"></span> 1 Next</span>
+</div>
+</div>
+</div>
+<!-- Structured 5-Question Milestone List -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- 1. University Registration -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-through text-on-surface-variant/70">1. University Registration</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Validated 2024/2025</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Source: univ-nantes.fr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Certificat de scolarité &amp; Carte Pass Sup issued • UFR Sciences et Techniques
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Attestation</span>
+</button>
+</div>
+</div>
+<!-- 2. CVEC Student Life Contribution -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-through text-on-surface-variant/70">2. CVEC Contribution (€103)</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Paid</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Source: cvec.etudiant.gouv.fr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Attestation acquittée n° 24-09812-NT stored in your secure vault
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Receipt</span>
+</button>
+</div>
+</div>
+<!-- 3. Housing Lease -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-through text-on-surface-variant/70">3. Housing &amp; Lease Agreement</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Bail Signé</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Source: crous-nantes.fr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Résidence CROUS Launay-Violet, Chambre T1 • Visale guarantee approved
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center">
+<button class="flex items-center gap-1 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[16px]">home</span>
+<span>View Lease</span>
+</button>
+</div>
+</div>
+<!-- 4. CPAM / Ameli (Urgent) -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">4. CPAM / Ameli Health Insurance</h3>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">Action Needed</span>
+<span class="text-tertiary font-label-sm text-label-sm font-bold">Deadline: Nov 15</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">etudiant-etranger.ameli.fr</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+<span><strong>What:</strong> Carte Vitale &amp; Sécu #</span>
+<span><strong>When:</strong> Before end of month 2</span>
+<span><strong>Where:</strong> Online portal CPAM 44</span>
+<span><strong>Missing:</strong> RIB + Apostilled Birth Cert</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+<button class="px-4 py-2 rounded-xl bg-tertiary-container text-on-tertiary-container font-label-md text-label-md font-bold shadow-sm hover:opacity-95 transition-opacity">
+            Upload RIB &amp; Birth Cert
+          </button>
+</div>
+</div>
+<!-- 5. CAF Housing Assistance (APL) -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">5. CAF Housing Allowance (APL)</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm font-bold">Est: €182/mo</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">caf.fr</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-1 font-body-sm text-body-sm text-on-surface-variant mt-1.5">
+<span><strong>Status:</strong> Dossier started (60%)</span>
+<span><strong>Retroactivity:</strong> Effective month of file</span>
+<span><strong>Where:</strong> CAF Loire-Atlantique</span>
+<span><strong>Action:</strong> Landlord form required</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+<button class="px-4 py-2 rounded-xl bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm hover:bg-on-primary-fixed-variant transition-colors">
+            Resume CAF File
+          </button>
+</div>
+</div>
+<!-- 6. Validation VLS-TS Visa -->
+<div class="p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-bold">6. VLS-TS Visa Confirmation (Taxe de séjour)</h3>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Deadline: Dec 1, 2024</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">ANEF (Interieur.gouv.fr)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Must be validated within 3 months of arrival. Tax stamp: €75 (Timbre fiscal).
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+<button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm hover:bg-surface-container transition-colors">
+            Validate on ANEF
+          </button>
+</div>
+</div>
+<!-- 7. Tan Transport Pass -->
+<div class="p-space-md rounded-xl bg-surface-container-low/50 hover:bg-surface-container-low transition-colors flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">radio_button_unchecked</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-title-md text-title-md text-on-surface font-semibold text-on-surface-variant">7. Naolib / Tan Transport Pass (-26 ans)</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">Upcoming</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">naolib.fr</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Free on weekends • Semestriel student tariff available with school certificate
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-end md:self-center shrink-0">
+<button class="px-4 py-2 rounded-xl bg-surface-container-lowest text-on-surface-variant font-label-md text-label-md hover:text-on-surface shadow-sm">
+            Subscribe Online
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Actions Grid (8 Modules) -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Student Operating Modules</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant access to specialized French administrative and lifestyle tooling</p>
+</div>
+<a class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center gap-1" href="#">
+<span>All 12 Modules</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<!-- Module 1: Housing & Visale -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="housing" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">home_work</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Visale Validated</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Housing &amp; Visale</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">CROUS, bail, garants</p>
+</div>
+</a>
+<!-- Module 2: Immigration & ANEF -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="my-procedures" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">39 Days Remaining</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Immigration &amp; ANEF</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">VLS-TS, Préfecture Loire-Atl.</p>
+</div>
+</a>
+<!-- Module 3: Ameli & Mutuelle -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="health-social" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Dossier Incomplete</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Ameli &amp; Mutuelle</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Sécurité sociale, CSS, Carte Vitale</p>
+</div>
+</a>
+<!-- Module 4: CAF & Grants -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="money-caf" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold">Simulateur Active</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">CAF &amp; Grants</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">APL subsidy, Prime d'activité</p>
+</div>
+</a>
+<!-- Module 5: Student Jobs -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="jobs-internships" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">work</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">0 / 964h</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Legal quota tracker</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Student Jobs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">CV Europass, job offers Nantes</p>
+</div>
+</a>
+<!-- Module 6: Naolib Transport -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="explore-map" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">directions_subway</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Tram 2: Lombarderie</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Naolib &amp; Vélo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Tram L2/L3, Bicloo pass</p>
+</div>
+</a>
+<!-- Module 7: Eco & Recycling -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="eco-impact" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">north_east</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">780 Eco Pts</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Eco &amp; Recycling</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Tri sélectif, compost Nantes</p>
+</div>
+</a>
+<!-- Module 8: EFS Blood Drive -->
+<a class="group bg-surface-container-lowest p-space-md rounded-2xl shadow-sm hover:shadow-md transition-all flex flex-col justify-between h-40" data-path="community" href="#">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-xl bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">bloodtype</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">Drive Today</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-error font-bold">Campus Lombarderie</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">EFS Blood Drive</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Don du sang étudiant</p>
+</div>
+</a>
+</div>
+</section>
+<!-- Two-Column Lower Section: Nearby Map + Eco Impact Cockpit -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left Column: Nearby & Live Student Map (8 cols) -->
+<div class="lg:col-span-7 flex flex-col bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">explore</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Nearby Student Map</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live essential locations around Lombarderie &amp; Nantes Centre</p>
+</div>
+<!-- Filter Pill Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold shadow-sm whitespace-nowrap">All</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap">🍽 Resto U</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap">🏥 CPAM</button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-sm text-label-sm whitespace-nowrap">🚲 Bicloo</button>
+</div>
+</div>
+<!-- Map Display Container -->
+<div class="relative w-full h-80 rounded-xl overflow-hidden bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-location="Universite de Nantes Lombarderie, France" style=""></div>
+<!-- Floating overlay card with live distances -->
+<div class="absolute bottom-3 left-3 right-3 bg-surface-container-lowest/90 backdrop-blur-md p-space-sm rounded-xl shadow-md flex items-center justify-between gap-space-sm overflow-x-auto">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary shrink-0"></span>
+<div class="truncate">
+<span class="font-label-md text-label-md text-on-surface font-bold truncate block">Resto U Lombarderie</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Repas CROUS €1.00 (Boursier) • 180m away</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<a class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-bold flex items-center gap-1" href="https://maps.google.com" target="_blank">
+<span class="material-symbols-outlined text-[14px]">navigation</span>
+<span>Go</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Live Distance Micro-list -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">restaurant</span>
+<span class="font-label-md text-label-md text-on-surface">Resto U Tertre</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">400m</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[18px]">bloodtype</span>
+<span class="font-label-md text-label-md text-on-surface">EFS Maison Don CHU</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">1.2 km</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">delete</span>
+<span class="font-label-md text-label-md text-on-surface">Compost Campus</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">60m</span>
+</div>
+</div>
+</div>
+<!-- Right Column: My Impact & Eco Actions (5 cols) -->
+<div class="lg:col-span-5 flex flex-col bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm gap-space-md justify-between">
+<div class="flex flex-col gap-space-md">
+<!-- Eco Score Header -->
+<div class="flex items-center justify-between">
+<div>
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[20px]">eco</span>
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-wider">Student Eco Profile</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-0.5">My Impact &amp; Solidarity</h2>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-md text-headline-md font-extrabold text-secondary leading-none">780</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Top 15% Nantes</span>
+</div>
+</div>
+<!-- Weekly Challenge Card -->
+<div class="p-space-md rounded-xl bg-secondary-fixed/30 flex flex-col gap-2 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">
+              Weekly Challenge
+            </span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">+50 eco points</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Take Naolib tram/bus 4 times</h3>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Progress: 3 / 4 trips validated</span>
+<span class="font-bold text-secondary">75%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<!-- Quick Stats Bento Rows -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">recycling</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Waste sorted this term</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">14.5 kg</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error-container text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Blood donations completed</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">2 donations</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">volunteer_activism</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface">Secours Populaire Nantes</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-on-surface">8h volunteered</span>
+</div>
+</div>
+</div>
+<!-- Action Footer -->
+<div class="pt-space-sm mt-space-xs">
+<a class="w-full py-2.5 px-space-md rounded-xl bg-surface-container hover:bg-surface-container-high text-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-2 transition-colors" data-path="eco-impact" href="#">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>View Student Impact Badges &amp; Rewards</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple client-side micro-interaction for quick AI action
+  document.getElementById('btn-quick-ai')?.addEventListener('click', () => {
+    const searchInput = document.querySelector('header input[type="text"]');
+    if (searchInput) {
+      searchInput.focus();
+      searchInput.value = "What documents do I need to finalize my CPAM Carte Vitale?";
+      searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+    }
+  });
+</script></main></div></body></html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html lang="fr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary-fixed-dim":"#ffb599","on-tertiary-fixed":"#370e00","surface-container":"#eaedff","secondary":"#006c4a","inverse-primary":"#b4c5ff","on-error-container":"#93000a","on-primary-fixed-variant":"#003ea8","surface-container-lowest":"#ffffff","surface-bright":"#faf8ff","surface-variant":"#dae2fd","primary-fixed":"#dbe1ff","primary-fixed-dim":"#b4c5ff","on-primary-fixed":"#00174b","tertiary-fixed":"#ffdbce","secondary-fixed":"#85f8c4","tertiary-container":"#c04400","on-secondary":"#ffffff","surface-tint":"#0053db","surface-container-high":"#e2e7ff","on-primary-container":"#eeefff","on-background":"#131b2e","surface-container-low":"#f2f3ff","secondary-container":"#82f5c1","error":"#ba1a1a","on-surface":"#131b2e","on-surface-variant":"#434655","error-container":"#ffdad6","primary":"#004ac6","outline-variant":"#c3c6d7","on-tertiary-container":"#ffede7","on-error":"#ffffff","inverse-on-surface":"#eef0ff","on-secondary-container":"#00714e","on-secondary-fixed":"#002114","inverse-surface":"#283044","on-secondary-fixed-variant":"#005137","surface-container-highest":"#dae2fd","outline":"#737686","on-primary":"#ffffff","tertiary":"#973400","surface-dim":"#d2d9f4","on-tertiary":"#ffffff","secondary-fixed-dim":"#68dba9","on-tertiary-fixed-variant":"#7f2b00","surface":"#faf8ff","background":"#faf8ff","primary-container":"#2563eb"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.25rem","space-xl":"2rem","margin-lg":"3rem","gutter-lg":"2rem","space-lg":"1.5rem","space-sm":"0.5rem","gutter-sm":"1rem","margin":"1.5rem","space-md":"1rem","margin-sm":"1rem","gutter":"1.5rem"},"fontFamily":{"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},"fontSize":{"body-lg":["1.0625rem",{"lineHeight":"1.6","letterSpacing":"0","fontWeight":"400"}],"headline-md":["1.5rem",{"lineHeight":"1.35","letterSpacing":"-0.015em","fontWeight":"700"}],"display-mobile":["2.25rem",{"lineHeight":"1.2","letterSpacing":"-0.025em","fontWeight":"800"}],"label-md":["0.875rem",{"lineHeight":"1.2","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"1.25","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-sm":["1.25rem",{"lineHeight":"1.4","letterSpacing":"-0.01em","fontWeight":"600"}],"display":["3rem",{"lineHeight":"1.15","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-lg-mobile":["1.625rem",{"lineHeight":"1.3","letterSpacing":"-0.015em","fontWeight":"700"}],"body-sm":["0.8125rem",{"lineHeight":"1.5","letterSpacing":"0.005em","fontWeight":"400"}],"title-md":["1.125rem",{"lineHeight":"1.45","letterSpacing":"-0.005em","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.55","letterSpacing":"0","fontWeight":"400"}],"label-sm":["0.75rem",{"lineHeight":"1.2","letterSpacing":"0.03em","fontWeight":"700"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] overflow-y-auto"><div class="flex flex-col"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="CampusLink France Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VeW8mjTLt_yp4kuF8ydlaGh4U8xAPZSJW1FRlp-_57LwjSMqulfhMmQZ3PkDWxlpkH2z3nWGNuzX3aD7h0j9QrtmXMuVaQHpJkD1fG_Q62xV2IqEixXPAoq4imfkqKCNGe--TkdQnPX40gdznxlI6ZFfY1INy1er6dcPPkxfzFgoBfUC6TFZ_DsT5dBLK_FxzmEod3seslMVeWCUe_PYYoMu3XYiJHZy1Ndl1-F-zbYjnHSh-R9FVAoSo"/><div class="flex flex-col"><span class="font-title-md text-title-md text-on-surface leading-tight">CampusLink</span><span class="font-label-sm text-label-sm text-on-surface-variant font-bold uppercase tracking-wider">France</span></div></div><span class="px-space-sm py-0.5 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm">Étudiant OS</span></div><nav class="flex flex-col px-space-md gap-space-xs mt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-bold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-md text-label-md">Dashboard</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-xl transition-colors bg-primary-container text-on-primary-container font-bold" data-path="my-procedures" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">assignment_turned_in</span><span class="font-label-md text-label-md">My Procedures</span></div><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-tertiary font-label-sm text-label-sm font-bold">3 pending</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="housing" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">home_work</span><span class="font-label-md text-label-md">Housing</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="health-social" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">medical_services</span><span class="font-label-md text-label-md">Health &amp; Social</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="money-caf" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">account_balance_wallet</span><span class="font-label-md text-label-md">Money &amp; CAF</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="jobs-internships" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">work</span><span class="font-label-md text-label-md">Jobs &amp; Internships</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="studies" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-md text-label-md">Studies</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="explore-map" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-label-md text-label-md">Explore Map</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="eco-impact" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">eco</span><span class="font-label-md text-label-md">Eco &amp; Impact</span></div><span class="w-2 h-2 rounded-full bg-secondary"></span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="community" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">diversity_3</span><span class="font-label-md text-label-md">Community</span></div></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="student-marketplace" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px]">storefront</span><span class="font-label-md text-label-md">Student Marketplace</span></div></a><div class="my-space-xs pt-space-xs"><a class="flex items-center justify-between px-space-md py-space-sm rounded-xl bg-surface-container-low text-primary hover:bg-surface-container-high transition-colors" data-path="ask-campuslink-ai" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span><span class="font-label-md text-label-md font-bold">Ask CampusLink AI</span></div><span class="material-symbols-outlined text-[16px]">chevron_right</span></a></div></nav></div><div class="p-space-md flex flex-col gap-space-sm bg-surface-container-low/60 rounded-xl m-space-md"><div class="flex items-center gap-space-sm"><div class="relative"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusGHVb3piZKk0cwc0DB26_1_kD0mN3uGhEfC2Sm-s73GilFQosW_ffV15v2m5cpUosIUjgkcqivQBbtoqW7de_yZfBh2apABlXwNwdNqf0k8SaayPeldo3TDQJ7LI5iZVg_538betwEUVXXP7Bsu1diLfBcdU53ocB7cm3AvJ9iM9Wl2s3cBlFmcuZQXYMCS6zLa0b4wXFDpRJAUieXAfSnKctmpOKh30-5KkzP5z5wZIsLn-rXIA"/><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-secondary ring-2 ring-surface-container-lowest"></span></div><div class="flex flex-col min-w-0 flex-1"><span class="font-label-md text-label-md text-on-surface truncate">Mohamed B.</span><span class="font-body-sm text-body-sm text-on-surface-variant truncate">Univ. de Nantes • M1 CS</span></div></div><div class="flex items-center justify-between pt-space-xs"><div class="flex items-center gap-space-xs"><a class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="notifications" href="#"><span class="material-symbols-outlined text-[18px]">notifications</span><span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full bg-error text-on-error font-label-sm text-[9px] flex items-center justify-center font-bold">2</span></a><a class="p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[18px]">settings</span></a></div><div class="flex items-center bg-surface-container-highest px-space-xs py-0.5 rounded-lg"><button class="px-1.5 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-primary font-bold shadow-[0_1px_2px_rgba(0,0,0,0.05)]">FR</button><span class="text-outline text-[10px] mx-1">|</span><button class="px-1.5 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface">EN</button></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-xl flex items-center justify-between gap-space-md"><div class="flex-1 max-w-xl"><div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-space-sm rounded-xl shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-outline text-[20px]">search</span><input class="w-full bg-transparent font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="Search procedures, CROUS, CAF, metro, recycling..." type="text"/><kbd class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px] font-bold">⌘K</kbd></div></div><div class="flex items-center gap-space-md"><button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-lowest shadow-[0_1px_3px_rgba(15,23,42,0.04)] hover:bg-surface-container-low transition-colors"><span class="font-label-md text-label-md text-on-surface">📍 Nantes, France</span><span class="material-symbols-outlined text-outline text-[16px]">expand_more</span></button><div class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container text-primary font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[16px]">verified</span><span class="font-bold">Visa Valid: 284 days left</span></div><a class="flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-error-container text-on-error-container hover:opacity-90 transition-opacity" data-path="emergency-services" href="#"><span class="material-symbols-outlined text-[16px]">emergency</span><span class="font-label-sm text-label-sm font-bold">Urgence 112/15</span></a><button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant transition-colors shadow-[0_4px_12px_rgba(37,99,235,0.2)]"><span class="material-symbols-outlined text-[18px]">auto_awesome</span><span class="font-label-md text-label-md font-bold">Ask AI</span></button><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_3px_rgba(0,0,0,0.08)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusGHVb3piZKk0cwc0DB26_1_kD0mN3uGhEfC2Sm-s73GilFQosW_ffV15v2m5cpUosIUjgkcqivQBbtoqW7de_yZfBh2apABlXwNwdNqf0k8SaayPeldo3TDQJ7LI5iZVg_538betwEUVXXP7Bsu1diLfBcdU53ocB7cm3AvJ9iM9Wl2s3cBlFmcuZQXYMCS6zLa0b4wXFDpRJAUieXAfSnKctmpOKh30-5KkzP5z5wZIsLn-rXIA"/></div></header><main class="relative pt-16 bg-surface w-full px-space-xl py-space-lg"><div class="flex flex-col w-full">
+<div class="w-full max-w-7xl mx-auto space-y-space-xl pb-space-xl">
+<!-- Top Progress & Header Bar -->
+<div class="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-space-md pt-space-xs">
+<div class="space-y-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary font-bold">Parcours &amp; Formalités</span>
+<span class="text-outline text-body-sm font-label-sm">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Session Universitaire 2024–2025</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Administrative Roadmap &amp; Procedures</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          All official French formalities categorized by timeline, official legal requirements, and peer-verified student advice from the Nantes student community.
+        </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded-full">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-md text-label-md text-on-surface"><strong>3</strong> Active dossiers</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-secondary"><strong>4</strong> Completed</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-md text-label-md text-on-surface-variant">2 Upcoming</span>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container-lowest text-primary hover:bg-surface-container px-space-md py-space-sm rounded-xl shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span class="font-label-md text-label-md">Export Dossier (PDF)</span>
+</button>
+</div>
+</div>
+<!-- Search & Multi-Tag Filters -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex flex-col md:flex-row gap-space-md items-center justify-between">
+<div class="relative w-full md:w-96">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">filter_list</span>
+<input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low rounded-xl font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container" placeholder="Filter by procedure name, CAF, Ameli, Visa..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold shrink-0 mr-space-xs">Priority:</span>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-primary-container text-on-primary-container shadow-sm shrink-0">All</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Urgent Legal</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Financial / CAF</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Health &amp; CPAM</button>
+<button class="px-space-md py-1.5 rounded-full font-label-md text-label-md bg-surface-container hover:bg-surface-container-high text-on-surface-variant shrink-0 transition-colors">Academic</button>
+</div>
+</div>
+</div>
+<!-- Timeline Horizon Tabs -->
+<div class="relative bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm overflow-x-auto">
+<div class="flex items-center min-w-[760px] justify-between gap-space-xs">
+<!-- Step 1 -->
+<button class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-all text-left group">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px] flex items-center justify-center font-bold">✓</span>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary">1. Before Arrival</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Campus France &amp; Visa</span>
+</button>
+<span class="text-outline-variant font-label-sm text-[14px]">→</span>
+<!-- Step 2 -->
+<button class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-all text-left group">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary font-label-sm text-[11px] flex items-center justify-center font-bold">✓</span>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary">2. First Week</span>
+</div>
+<span class="font-body-sm text-body-sm text-secondary font-medium">SIM &amp; French Bank RIB</span>
+</button>
+<span class="text-outline-variant font-label-sm text-[14px]">→</span>
+<!-- Step 3 (Active) -->
+<div class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl bg-primary-container text-on-primary-container shadow-md">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[11px] flex items-center justify-center font-bold">3</span>
+<span class="font-label-md text-label-md font-bold text-on-primary-container">3. First Month</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant bg-surface-container-lowest/80 px-2 py-0.5 rounded-full font-bold">2 Urgent items</span>
+</div>
+<span class="text-outline-variant font-label-sm text-[14px]">→</span>
+<!-- Step 4 -->
+<button class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-all text-left group">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container text-outline font-label-sm text-[11px] flex items-center justify-center font-bold">4</span>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary">4. During Year</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tax Declaration &amp; Jobs</span>
+</button>
+<span class="text-outline-variant font-label-sm text-[14px]">→</span>
+<!-- Step 5 -->
+<button class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-all text-left group">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container text-outline font-label-sm text-[11px] flex items-center justify-center font-bold">5</span>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary">5. Renewal</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Titre de séjour Préfecture</span>
+</button>
+<span class="text-outline-variant font-label-sm text-[14px]">→</span>
+<!-- Step 6 -->
+<button class="flex-1 flex flex-col items-center gap-1 py-space-sm px-space-md rounded-xl hover:bg-surface-container-low transition-all text-left group">
+<div class="flex items-center gap-1.5">
+<span class="w-5 h-5 rounded-full bg-surface-container text-outline font-label-sm text-[11px] flex items-center justify-center font-bold">6</span>
+<span class="font-label-md text-label-md text-on-surface group-hover:text-primary">6. End of Studies</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">APS / Recherche Emploi</span>
+</button>
+</div>
+</div>
+<!-- Main Content Cockpit + Companion Sidebar -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Primary Column: Procedure Cards in Stage 3 (First Month) -->
+<div class="lg:col-span-8 space-y-space-lg">
+<!-- Stage Intro Banner -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">flag</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface">Stage 3: First Month (J+30)</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Establish your legal status, social coverage, and housing assistance. Critical deadlines apply.</p>
+</div>
+</div>
+<span class="hidden sm:inline-flex px-3 py-1 bg-surface-container-lowest text-primary rounded-full font-label-sm text-label-sm font-bold shadow-sm">
+            2 / 3 Required Actions Open
+          </span>
+</div>
+<!-- PROCEDURE 1: CPAM (Ameli) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden space-y-space-md">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-tertiary-container"></div>
+<!-- Header Area -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+                  HIGH PRIORITY • ACTION REQUIRED
+                </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+                  Official Formalité Obligatoire
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">CPAM (Ameli) - French Social Security Registration</h3>
+</div>
+<span class="px-3 py-1 bg-error-container text-on-error-container rounded-full font-label-sm text-label-sm font-bold shrink-0 self-start">
+              Deadline: 6 Days Remaining
+            </span>
+</div>
+<!-- Description / What, When, Where Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-md rounded-xl bg-surface-container-low/70">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">What</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Register for 100% free student healthcare coverage and obtain your French provisional Social Security Number (NIR).</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">When</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Immediately after obtaining university Certificat de Scolarité. Maximum within 30 days of arrival.</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">Where</span>
+<p class="font-body-sm text-body-sm text-primary font-bold mt-0.5 flex items-center gap-1">
+                etudiant-etranger.ameli.fr
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</p>
+</div>
+</div>
+<!-- Required Documents Interactive Checklist -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Required Documents Checklist (3 of 4 Ready)</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">75% Complete</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full w-3/4"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xs">
+<label class="flex items-center gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface line-through text-outline">Passport + Validated VLS-TS</span>
+<span class="material-symbols-outlined text-secondary text-[16px] ml-auto">check_circle</span>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface line-through text-outline">Attestation de scolarité (Univ Nantes)</span>
+<span class="material-symbols-outlined text-secondary text-[16px] ml-auto">check_circle</span>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs rounded-lg hover:bg-surface-container-low cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0" disabled="" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface line-through text-outline">French Bank RIB (Populaire Grand Ouest)</span>
+<span class="material-symbols-outlined text-secondary text-[16px] ml-auto">check_circle</span>
+</label>
+<label class="flex items-center gap-space-sm p-space-xs rounded-lg bg-tertiary-fixed/30 cursor-pointer">
+<input class="w-4 h-4 rounded text-tertiary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-tertiary font-bold">Birth Certificate (Acte de naissance traduit)</span>
+<span class="material-symbols-outlined text-tertiary text-[16px] ml-auto">error</span>
+</label>
+</div>
+</div>
+<!-- Peer Community Advice Callout (Refined European Context Box) -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">tips_and_updates</span>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Student Tip from Nantes Student Community</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Upload your sworn translated birth certificate strictly as a PDF under 2MB. If you have not yet received your plastic Carte Vitale, immediately download your temporary <strong>Attestation de Droits</strong> directly on Ameli: general practitioners and pharmacies accept it for 100% reimbursement!
+              </p>
+</div>
+</div>
+<!-- Actions & Source Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Source: Assurance Maladie (ameli.fr)</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">file_upload</span>
+                Upload Missing Document
+              </button>
+<a class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-1.5" href="https://etudiant-etranger.ameli.fr" target="_blank">
+<span>Visit etudiant-etranger.ameli.fr</span>
+<span class="material-symbols-outlined text-[16px]">launch</span>
+</a>
+</div>
+</div>
+</div>
+<!-- PROCEDURE 2: Validation of VLS-TS Long-Stay Visa on ANEF -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden space-y-space-md">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-error"></div>
+<!-- Header Area -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                  LEGAL RESIDENCY DEADLINE
+                </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+                  Ministère de l'Intérieur (ANEF)
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Validation of VLS-TS Visa on ANEF</h3>
+</div>
+<div class="flex items-center gap-1 px-3 py-1 bg-surface-container text-primary rounded-full font-label-sm text-label-sm font-bold shrink-0 self-start">
+<span class="material-symbols-outlined text-[16px]">timelapse</span>
+              24 Days Remaining (90d rule)
+            </div>
+</div>
+<!-- Description / What, When, Where Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-md rounded-xl bg-surface-container-low/70">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">What</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Validate your long-stay visa to give it legal value as a Residence Permit (Titre de séjour) and pay the €50 student tax timbre.</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">When</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Strictly within 90 days after landing in France. Past this limit, residency is technically irregular.</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">Where</span>
+<p class="font-body-sm text-body-sm text-primary font-bold mt-0.5 flex items-center gap-1 truncate">
+                administration-etrangers-en-france.interieur.gouv.fr
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</p>
+</div>
+</div>
+<!-- Requirements Pill Summary -->
+<div class="space-y-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold">Prerequisites to Have Ready Before Validation</span>
+<div class="flex flex-wrap gap-space-xs pt-1">
+<span class="px-space-md py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span> Visa Number (VLS-TS sticker)
+              </span>
+<span class="px-space-md py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span> Official Date of Entry (Passport Stamp)
+              </span>
+<span class="px-space-md py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span> Fixed Nantes Residence Address
+              </span>
+<span class="px-space-md py-1 rounded-lg bg-surface-container text-on-surface font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">check</span> Carte Bancaire (CB) for €50 Tax Stamp
+              </span>
+</div>
+</div>
+<!-- Advice box -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">lightbulb</span>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">CampusLink Advisory</span>
+<p class="font-body-sm text-body-sm text-on-surface">
+                Do not wait for the final week. You will receive an immediate PDF download titled <em>Confirmation de la validation de l'enregistrement de votre visa</em>. This specific PDF is strictly requested by both CAF for housing benefits and HR for student employment contracts!
+              </p>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Official Government ANEF Service</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+                Save Confirmation Receipt
+              </button>
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-1.5">
+<span>Validate on ANEF Portal</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PROCEDURE 3: CAF - APL Housing Benefit -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative overflow-hidden space-y-space-md">
+<div class="absolute top-0 left-0 bottom-0 w-1.5 bg-secondary"></div>
+<!-- Header Area -->
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">payments</span>
+                  FINANCIAL AID (€150–€220 / MO)
+                </span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">
+                  CAF (Allocations Familiales)
+                </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">CAF - Demande d'Aide Personnalisée au Logement (APL)</h3>
+</div>
+<span class="px-3 py-1 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm font-bold shrink-0 self-start">
+              Regular Priority
+            </span>
+</div>
+<!-- Description Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md p-space-md rounded-xl bg-surface-container-low/70">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">What</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Government rent subsidy paid each month directly to your student bank account or deducted directly from CROUS rent.</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">When</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">Immediately after moving in and signing your lease. CAF does not pay retroactively for past months.</p>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase font-bold">Where</span>
+<p class="font-body-sm text-body-sm text-primary font-bold mt-0.5 flex items-center gap-1">
+                caf.fr
+                <span class="material-symbols-outlined text-[14px]">open_in_new</span>
+</p>
+</div>
+</div>
+<!-- Required Documents -->
+<div class="space-y-space-xs">
+<span class="font-label-md text-label-md text-on-surface font-bold">Checklist of CAF Dossier Documents</span>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-1">
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[18px]">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Bail de location (Signed Lease)</span>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[18px]">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">Attestation de loyer (Filled by CROUS/Landlord)</span>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-secondary text-[18px]">task_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface">French RIB with IBAN</span>
+</div>
+<div class="flex items-center gap-space-sm p-space-xs rounded-lg bg-surface-container">
+<span class="material-symbols-outlined text-outline text-[18px]">radio_button_unchecked</span>
+<span class="font-body-sm text-body-sm text-on-surface">VLS-TS Validation Receipt (Waiting ANEF)</span>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-between pt-space-xs gap-space-sm">
+<div class="flex items-center gap-space-xs text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[18px]">home</span>
+<span>Available for CROUS residences &amp; private flats</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">calculate</span>
+                Access CAF Simulation
+              </button>
+<button class="flex-1 sm:flex-initial px-space-md py-space-sm rounded-xl bg-primary text-on-primary hover:bg-on-primary-fixed-variant font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-1.5">
+<span>Start APL Claim on caf.fr</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Companion Rail (4 Columns) -->
+<div class="lg:col-span-4 space-y-space-lg">
+<!-- Document Vault Widget ('Mes Justificatifs') -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">folder_shared</span>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Mes Justificatifs</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm font-bold">5 files</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Cloud-synced files automatically attached when generating French administrative packages.
+          </p>
+<div class="space-y-space-xs">
+<!-- Doc 1: Passport -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">badge</span>
+<div class="truncate">
+<div class="font-label-md text-label-md text-on-surface truncate">Passport_Mohamed_B.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Valid until Sept 2027</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Doc 2: Scolarité -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">school</span>
+<div class="truncate">
+<div class="font-label-md text-label-md text-on-surface truncate">Certificat_Scolarite_24-25.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Univ Nantes • M1 Informatique</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Doc 3: Assurance Habitation -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">home</span>
+<div class="truncate">
+<div class="font-label-md text-label-md text-on-surface truncate">Assurance_Logement_MAE.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">CROUS Berlioz #204</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Doc 4: RIB -->
+<div class="p-space-sm rounded-xl bg-surface-container-low flex items-center justify-between gap-space-xs hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">account_balance</span>
+<div class="truncate">
+<div class="font-label-md text-label-md text-on-surface truncate">RIB_BanquePopulaire_FR76.pdf</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Main checking account</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0">check_circle</span>
+</div>
+<!-- Doc 5: Acte de naissance (Warning) -->
+<div class="p-space-sm rounded-xl bg-tertiary-fixed/30 flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0">warning</span>
+<div class="truncate">
+<div class="font-label-md text-label-md text-tertiary truncate">Acte_Naissance_Traduit.jpg</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Image blurry • Needs PDF under 2MB</div>
+</div>
+</div>
+<button class="px-2 py-1 rounded bg-surface-container-lowest text-tertiary hover:bg-surface-container font-label-sm text-label-sm font-bold shrink-0">
+                Fix
+              </button>
+</div>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+            Upload New Document
+          </button>
+</div>
+<!-- AI Assistant Scan & Verify Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">document_scanner</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Prefecture AI Scan</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">v3.2 Spec</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            CampusLink AI verifies that your sworn translation stamps, dates under 3 months, and legibility match French Prefecture &amp; CPAM norms before you submit.
+          </p>
+<!-- Upload Drop Box -->
+<div class="p-space-lg rounded-xl bg-surface-container-low flex flex-col items-center justify-center text-center space-y-space-xs hover:bg-surface-container transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">cloud_upload</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-bold">Drag document here or click</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">PDF, JPEG, or PNG up to 10MB</p>
+</div>
+</div>
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Recent verification test</span>
+<span class="text-secondary font-bold">Passed 98% conformity</span>
+</div>
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-[98%]"></div>
+</div>
+</div>
+</div>
+<!-- Student Hotline Nantes Support Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">support_agent</span>
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Stuck with Nantes Prefecture?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Weekly free student legal clinic (Clinique Juridique Nantes)</p>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container-low space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Next Drop-in Session</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Thursday 14h00</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maison des Étudiants (MDE), Boulevard Guy Mollet</p>
+</div>
+<button class="w-full py-space-sm rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md transition-colors">
+            Book 15-min Student Tutor
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
