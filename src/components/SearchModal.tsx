@@ -40,151 +40,139 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     : SITE_DATA.procedures.slice(0, 3);
 
   const matchingHousing = q
-    ? SITE_DATA.housing.listings.filter(
+    ? SITE_DATA.housing.platforms.filter(
         (h) =>
-          h.title.toLowerCase().includes(q) ||
-          h.location.toLowerCase().includes(q)
+          h.name.toLowerCase().includes(q) ||
+          h.description.toLowerCase().includes(q) ||
+          h.usefulFor.toLowerCase().includes(q)
       )
-    : SITE_DATA.housing.listings.slice(0, 2);
+    : SITE_DATA.housing.platforms.slice(0, 3);
 
-  const matchingMap = q
-    ? SITE_DATA.mapPoints.filter(
-        (m) =>
-          m.name.toLowerCase().includes(q) ||
-          m.categoryLabel.toLowerCase().includes(q)
+  const matchingResources = q
+    ? SITE_DATA.officialResources.filter(
+        (r) =>
+          r.name.toLowerCase().includes(q) ||
+          r.acronym.toLowerCase().includes(q) ||
+          r.description.toLowerCase().includes(q)
       )
-    : SITE_DATA.mapPoints.slice(0, 2);
+    : SITE_DATA.officialResources.slice(0, 3);
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center pt-16 px-4 bg-slate-900/40 backdrop-blur-xs">
       <div
-        className="w-full max-w-xl bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden flex flex-col max-h-[75vh]"
+        className="w-full max-w-xl bg-white rounded-xl border border-slate-200 shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-100"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Input */}
-        <div className="flex items-center px-4 py-3 border-b border-slate-200 gap-2.5 bg-slate-50">
-          <span className="material-symbols-outlined text-blue-600 text-[20px]">search</span>
+        {/* Search Input Bar */}
+        <div className="p-3 border-b border-slate-200 flex items-center gap-2">
+          <span className="material-symbols-outlined text-slate-400 text-[20px]">search</span>
           <input
             type="text"
+            autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            autoFocus
-            placeholder="Rechercher une démarche, logement, aide, tri..."
-            className="w-full bg-transparent text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none"
+            placeholder="Rechercher une démarche, logement, repas 1€, santé..."
+            className="w-full text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-hidden bg-transparent"
           />
-          {query ? (
-            <button
-              onClick={() => setQuery("")}
-              className="text-xs text-slate-400 hover:text-slate-700 px-1"
-            >
-              Effacer
-            </button>
-          ) : (
-            <kbd className="px-1.5 py-0.5 rounded bg-slate-200 text-slate-500 text-[10px] font-semibold">
-              ESC
-            </kbd>
-          )}
+          <button
+            type="button"
+            onClick={onClose}
+            className="p-1 rounded text-slate-400 hover:text-slate-700 hover:bg-slate-100 text-xs"
+          >
+            Esc
+          </button>
         </div>
 
         {/* Results */}
-        <div className="overflow-y-auto p-4 space-y-4 flex-1">
-          {matchingProcedures.length > 0 && (
-            <div>
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
-                Démarches
-              </span>
-              <div className="space-y-1">
-                {matchingProcedures.map((proc) => (
-                  <Link
-                    key={proc.id}
-                    href={`/procedures#${proc.id}`}
-                    onClick={onClose}
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors"
-                  >
-                    <div className="truncate">
-                      <span className="text-xs font-semibold text-slate-800 block truncate">
-                        {proc.title}
-                      </span>
-                      <span className="text-[11px] text-slate-500 truncate block">
-                        {proc.stage} • {proc.officialOrg}
-                      </span>
-                    </div>
-                    <span className="material-symbols-outlined text-slate-400 text-[14px]">
-                      chevron_right
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+        <div className="max-h-96 overflow-y-auto p-3 space-y-4 text-xs divide-y divide-slate-100">
+          {/* Procedures */}
+          <div className="space-y-1.5 pt-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block px-2">
+              Démarches & Séjour
+            </span>
+            {matchingProcedures.map((proc) => (
+              <Link
+                key={proc.id}
+                href={`/procedures#${proc.id}`}
+                onClick={onClose}
+                className="flex items-start justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors group"
+              >
+                <div>
+                  <span className="font-semibold text-slate-800 group-hover:text-blue-600 block">
+                    {proc.title}
+                  </span>
+                  <span className="text-[11px] text-slate-500 line-clamp-1">
+                    {proc.description}
+                  </span>
+                </div>
+                <span className="text-[10px] text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded font-medium shrink-0 ml-2">
+                  {proc.stage}
+                </span>
+              </Link>
+            ))}
+          </div>
 
-          {matchingHousing.length > 0 && (
-            <div>
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
-                Logement
-              </span>
-              <div className="space-y-1">
-                {matchingHousing.map((h) => (
-                  <Link
-                    key={h.id}
-                    href="/housing"
-                    onClick={onClose}
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors"
-                  >
-                    <div className="truncate">
-                      <span className="text-xs font-semibold text-slate-800 block truncate">
-                        {h.title}
-                      </span>
-                      <span className="text-[11px] text-slate-500 truncate block">
-                        {h.price} €/mois • {h.location}
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-semibold text-blue-600">
-                      Reste net: {h.netPrice} €
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Housing Platforms */}
+          <div className="space-y-1.5 pt-3">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block px-2">
+              Où chercher un logement
+            </span>
+            {matchingHousing.map((h) => (
+              <Link
+                key={h.id}
+                href="/housing"
+                onClick={onClose}
+                className="flex items-start justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors group"
+              >
+                <div>
+                  <span className="font-semibold text-slate-800 group-hover:text-blue-600 block">
+                    {h.name}
+                  </span>
+                  <span className="text-[11px] text-slate-500 line-clamp-1">
+                    {h.usefulFor}
+                  </span>
+                </div>
+                <span className="text-[10px] text-slate-500 shrink-0 ml-2">
+                  {h.badge}
+                </span>
+              </Link>
+            ))}
+          </div>
 
-          {matchingMap.length > 0 && (
-            <div>
-              <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1.5">
-                Lieux & Services
-              </span>
-              <div className="space-y-1">
-                {matchingMap.map((m) => (
-                  <Link
-                    key={m.id}
-                    href="/explore-map"
-                    onClick={onClose}
-                    className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-colors"
-                  >
-                    <div className="truncate">
-                      <span className="text-xs font-semibold text-slate-800 block truncate">
-                        {m.name}
-                      </span>
-                      <span className="text-[11px] text-slate-500 truncate block">
-                        {m.distance} • {m.hours}
-                      </span>
-                    </div>
-                    <span className="text-[11px] font-medium text-emerald-600">
-                      {m.categoryLabel}
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
+          {/* Official Resources */}
+          <div className="space-y-1.5 pt-3">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block px-2">
+              Portails Officiels
+            </span>
+            {matchingResources.map((res) => (
+              <a
+                key={res.id}
+                href={res.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={onClose}
+                className="flex items-start justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors group"
+              >
+                <div>
+                  <span className="font-semibold text-slate-800 group-hover:text-blue-600 block">
+                    {res.name} ({res.acronym})
+                  </span>
+                  <span className="text-[11px] text-slate-500 line-clamp-1">
+                    {res.description}
+                  </span>
+                </div>
+                <span className="material-symbols-outlined text-[14px] text-slate-400 shrink-0 ml-2">
+                  open_in_new
+                </span>
+              </a>
+            ))}
+          </div>
         </div>
 
-        {/* Footer */}
-        <div className="px-4 py-2 bg-slate-50 border-t border-slate-200 flex justify-between items-center text-[11px] text-slate-500">
-          <span>CampusLink France — Répertoire public</span>
-          <button onClick={onClose} className="text-blue-600 hover:underline">
-            Fermer
-          </button>
+        {/* Footer shortcuts */}
+        <div className="p-2.5 bg-slate-50 border-t border-slate-200 flex items-center justify-between text-[11px] text-slate-400 px-4">
+          <span>Recherche instantanée dans le guide officiel</span>
+          <span>Fermer avec Échap</span>
         </div>
       </div>
     </div>

@@ -4,13 +4,12 @@ Portail indépendant, moderne et léger conçu pour guider les étudiants intern
 
 ## Features
 
-- **Accueil & Synthèse** : Feuille de route chronologique en 6 étapes, alertes prioritaires d'arrivée et accès direct aux modules.
-- **Démarches & Roadmap** : Guide complet des formalités obligatoires (VLS-TS, CPAM, CAF, CVEC, Titres de séjour) avec listes de documents interactives.
-- **Logement & Visale** : Résidences CROUS, offres privées vérifiées et dispositifs de garantie d'État (Visale, DossierFacile).
-- **Santé & Sécu (Ameli)** : Affiliation gratuite à l'Assurance Maladie, simulateur de remboursement et numéros d'urgence 24/7.
-- **Bourses & CAF (APL)** : Simulateur d'aide au logement en temps réel, repas CROUS à 1 € et budget étudiant moyen.
-- **Jobs Étudiants (964h)** : Simulateur de quota légal annuel de travail, calcul des revenus et conseils pour le CV français.
-- **Carte des Services Campus** : Plan schématique interactif des restaurants universitaires, guichets administratifs, centres de santé et bibliothèques.
+- **Accueil & Synthèse** : Feuille de route chronologique en 6 étapes, alertes prioritaires 2026 et accès direct aux guides.
+- **Démarches & Roadmap** : Guide complet des formalités obligatoires (VLS-TS, CPAM, CAF, CVEC, Titres de séjour) avec listes de pièces justificatives.
+- **Logement (Où chercher)** : Répertoire des plateformes officielles (CROUS, Lokaviz, Mon Logement Étudiant, Visale, DossierFacile, Action Logement) et conseils anti-fraude.
+- **Santé & Sécu (Ameli)** : Affiliation gratuite à l'Assurance Maladie, médecin traitant, CSS et numéros d'urgence 24/7.
+- **Bourses & Aides (2026)** : Repas CROUS à partir de 1 € pour tous depuis mai 2026, règles CAF 2026 (distinction APL / ALS / ALF et conditions étudiants non-UE), aides d'urgence.
+- **Jobs Étudiants (964h)** : Quota légal annuel de travail (60%), SMIC horaire, contrat et conseils pour le CV français.
 - **Éco-Impact & Tri** : Moteur de tri immédiat "Où jeter ?" et guide des 4 filières de recyclage françaises.
 - **Don du Sang (EFS)** : Sensibilisation civique, étapes du don et adresses des maisons de don et collectes mobiles.
 - **Bénévolat Étudiant** : Annuaire des missions citoyennes et valorisation en crédits ECTS universitaires.
@@ -30,7 +29,7 @@ Tout le contenu éditable du site est centralisé dans un seul fichier :
 
 `src/data/siteData.ts`
 
-Toutes les pages et composants lisent leurs données depuis ce fichier (navigation, démarches, logements, santé, aides financières, jobs, carte, déchets, don du sang, bénévolat, associations, liens officiels). Modifier ce fichier met à jour l'ensemble du site.
+Toutes les pages et composants lisent leurs données depuis ce fichier (navigation, démarches, plateformes de logement, santé, aides financières 2026, jobs, déchets, don du sang, bénévolat, associations, liens officiels). Modifier ce fichier met à jour l'ensemble du site.
 
 ## Development
 
@@ -67,16 +66,15 @@ Ce projet est 100% frontend (sans backend ni base de données) et s'adapte direc
 CampusLink/
 ├── src/
 │   ├── app/                    # Routes Next.js (App Router)
-│   │   ├── blood-donation/     # Don du Sang
+│   │   ├── blood-donation/     # Don du Sang (EFS)
 │   │   ├── community/          # Communauté & Événements
 │   │   ├── eco-impact/         # Tri & Écologie
-│   │   ├── explore-map/        # Carte des services
 │   │   ├── health/             # Santé & Ameli
-│   │   ├── housing/            # Logement & Visale
+│   │   ├── housing/            # Où chercher un logement
 │   │   ├── jobs/               # Jobs & Quota 964h
-│   │   ├── money/              # Bourses & CAF APL
+│   │   ├── money/              # Bourses, Restauration 1€ & Aides
 │   │   ├── procedures/         # Démarches & Séjour
-│   │   ├── resources/          # Annuaire officiel
+│   │   ├── resources/          # Annuaire officiel de l'État
 │   │   ├── volunteering/       # Bénévolat
 │   │   ├── layout.tsx          # Layout racine
 │   │   └── page.tsx            # Page d'accueil

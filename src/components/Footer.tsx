@@ -36,13 +36,13 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/procedures#caf-apl" className="text-slate-600 hover:text-blue-600 transition-colors">
+                <Link href="/procedures#caf-housing-aid" className="text-slate-600 hover:text-blue-600 transition-colors">
                   Aide au Logement (CAF)
                 </Link>
               </li>
               <li>
                 <Link href="/housing" className="text-slate-600 hover:text-blue-600 transition-colors">
-                  Logement & Visale
+                  Où chercher un logement
                 </Link>
               </li>
             </ul>
@@ -60,18 +60,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/money" className="text-slate-600 hover:text-blue-600 transition-colors">
-                  Simulateur APL & Bourses
+                <Link href="/money#crous-food" className="text-slate-600 hover:text-blue-600 transition-colors">
+                  Repas CROUS à partir de 1 €
+                </Link>
+              </li>
+              <li>
+                <Link href="/money#housing-aid-rules" className="text-slate-600 hover:text-blue-600 transition-colors">
+                  Aides au Logement (Règles 2026)
                 </Link>
               </li>
               <li>
                 <Link href="/jobs" className="text-slate-600 hover:text-blue-600 transition-colors">
                   Jobs & Quota 964h
-                </Link>
-              </li>
-              <li>
-                <Link href="/explore-map" className="text-slate-600 hover:text-blue-600 transition-colors">
-                  Carte des Services Campus
                 </Link>
               </li>
             </ul>
@@ -94,8 +94,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/volunteering" className="text-slate-600 hover:text-blue-600 transition-colors">
-                  Bénévolat Étudiant
+                <Link href="/community" className="text-slate-600 hover:text-blue-600 transition-colors">
+                  Communauté & Tandems
                 </Link>
               </li>
               <li>

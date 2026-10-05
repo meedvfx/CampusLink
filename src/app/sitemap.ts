@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/health",
     "/money",
     "/jobs",
-    "/explore-map",
     "/eco-impact",
     "/blood-donation",
     "/volunteering",

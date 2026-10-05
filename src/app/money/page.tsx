@@ -1,206 +1,195 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { SITE_DATA } from "@/data/siteData";
 
 export default function MoneyPage() {
   const { financialAid } = SITE_DATA;
-  const [rent, setRent] = useState<number>(450);
-  const [housingType, setHousingType] = useState<"crous" | "private" | "coloc">("crous");
-  const [isScholarship, setIsScholarship] = useState<boolean>(false);
-
-  // Simplified calculation based on French CAF rules
-  const calculateApl = () => {
-    let base = 0;
-    if (housingType === "crous") {
-      base = Math.min(rent * 0.55, 195);
-    } else if (housingType === "private") {
-      base = Math.min(rent * 0.42, 215);
-    } else {
-      base = Math.min(rent * 0.38, 160);
-    }
-    if (isScholarship) {
-      base = Math.min(base + 35, rent - 50);
-    }
-    return Math.round(base);
-  };
-
-  const estimatedApl = calculateApl();
-  const netRent = Math.max(0, rent - estimatedApl);
+  const { crousFood, housingAidRules2026, otherAids } = financialAid;
 
   return (
-    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-8">
+    <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 space-y-10">
       {/* Header */}
       <div className="space-y-2">
         <span className="text-xs font-semibold text-amber-700 uppercase tracking-wide">
-          Finances & Allocations
+          Finances, Restauration & Aides Publiques (2026)
         </span>
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-          Aides Financières, CAF (APL) & Budget
+          Aides Financières, Bourses & Restauration
         </h1>
-        <p className="text-sm text-slate-600 max-w-2xl leading-relaxed">
-          Estimez votre allocation logement APL, découvrez les repas CROUS à 1 € et le budget moyen nécessaire pour vivre sereinement en France.
+        <p className="text-sm text-slate-600 max-w-3xl leading-relaxed">
+          Informations réglementaires officielles et à jour pour les étudiants en France : repas universitaires à partir de 1 €, règles 2026 des aides au logement et dispositifs d'urgence sociale.
         </p>
       </div>
 
-      {/* Interactive APL Calculator */}
-      <div className="p-6 rounded-xl border border-slate-200 bg-white space-y-5">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <h2 className="text-base font-bold text-slate-900">
-              Simulateur d'aide au logement CAF (APL)
+      {/* 1. CROUS Food: Repas à 1 € pour tous depuis mai 2026 */}
+      <section id="crous-food" className="p-6 rounded-xl border border-slate-200 bg-white space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+          <div className="space-y-1">
+            <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+              {crousFood.effectiveDate}
+            </span>
+            <h2 className="text-lg font-bold text-slate-900 mt-1">
+              {crousFood.title}
             </h2>
-            <p className="text-xs text-slate-500">
-              Estimation indicative pour un étudiant célibataire sans personnes à charge.
+            <p className="text-xs text-slate-500 font-medium">
+              {crousFood.subtitle}
             </p>
           </div>
+
           <a
-            href="https://www.caf.fr/allocataires/mes-services-en-ligne/estimer-vos-droits"
+            href={crousFood.officialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-semibold text-blue-600 hover:underline inline-flex items-center gap-1"
+            className="text-xs font-semibold text-blue-600 hover:underline inline-flex items-center gap-1 self-start sm:self-auto shrink-0"
           >
-            <span>Simulateur complet CAF.fr</span>
+            <span>Portail Étudiant.gouv.fr</span>
             <span className="material-symbols-outlined text-[13px]">open_in_new</span>
           </a>
         </div>
 
-        {/* Inputs */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-          {/* Rent Slider */}
-          <div className="space-y-2">
-            <label className="text-xs font-semibold text-slate-700 block">
-              Loyer mensuel charges comprises : <strong className="text-blue-600">{rent} €</strong>
-            </label>
-            <input
-              type="range"
-              min={200}
-              max={900}
-              step={10}
-              value={rent}
-              onChange={(e) => setRent(Number(e.target.value))}
-              className="w-full accent-blue-600"
-            />
+        <p className="text-xs text-slate-700 leading-relaxed">
+          {crousFood.desc}
+        </p>
+
+        <div className="p-3.5 rounded-lg bg-emerald-50/60 border border-emerald-100 space-y-2">
+          <h3 className="text-xs font-bold text-emerald-900 uppercase tracking-wide">
+            Comment en bénéficier :
+          </h3>
+          <ul className="text-xs text-emerald-950 space-y-1.5 list-disc list-inside">
+            {crousFood.howItWorks.map((item, idx) => (
+              <li key={idx}>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="text-[11px] text-slate-400 italic pt-1 border-t border-slate-100">
+          {crousFood.source}
+        </div>
+      </section>
+
+      {/* 2. Housing Aid: 2026 Rules & Distinction APL / ALS / ALF */}
+      <section id="housing-aid-rules" className="p-6 rounded-xl border border-slate-200 bg-white space-y-5">
+        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
+          <div className="space-y-1">
+            <span className="text-[11px] font-semibold text-amber-800 bg-amber-50 px-2 py-0.5 rounded">
+              {housingAidRules2026.effectiveDate}
+            </span>
+            <h2 className="text-lg font-bold text-slate-900 mt-1">
+              {housingAidRules2026.title}
+            </h2>
           </div>
 
-          {/* Housing Type */}
-          <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-700 block">
-              Type de logement :
-            </label>
-            <select
-              value={housingType}
-              onChange={(e) => setHousingType(e.target.value as any)}
-              className="w-full p-2 text-xs border border-slate-200 rounded-lg bg-slate-50 text-slate-800 focus:outline-hidden focus:border-blue-500"
-            >
-              <option value="crous">Résidence CROUS conventionnée</option>
-              <option value="private">Studio / Appartement privé</option>
-              <option value="coloc">Colocation</option>
-            </select>
-          </div>
+          <a
+            href={housingAidRules2026.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-semibold text-blue-600 hover:underline inline-flex items-center gap-1 self-start sm:self-auto shrink-0"
+          >
+            <span>Fiche Service-Public.fr</span>
+            <span className="material-symbols-outlined text-[13px]">open_in_new</span>
+          </a>
+        </div>
 
-          {/* Scholarship Toggle */}
-          <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-700 block">
-              Statut boursier :
-            </label>
-            <button
-              type="button"
-              onClick={() => setIsScholarship(!isScholarship)}
-              className={`w-full p-2 text-xs rounded-lg border font-medium text-left transition-colors flex items-center justify-between ${
-                isScholarship
-                  ? "bg-amber-50 border-amber-300 text-amber-900 font-semibold"
-                  : "bg-slate-50 border-slate-200 text-slate-600"
-              }`}
-            >
-              <span>{isScholarship ? "Boursier (échelon > 0)" : "Non-boursier"}</span>
-              <span className="material-symbols-outlined text-[18px]">
-                {isScholarship ? "check_circle" : "radio_button_unchecked"}
-              </span>
-            </button>
+        <p className="text-xs text-slate-600 leading-relaxed">
+          {housingAidRules2026.desc}
+        </p>
+
+        {/* Distinction APL / ALS / ALF */}
+        <div className="space-y-2">
+          <h3 className="text-xs font-bold text-slate-800 uppercase tracking-wide">
+            Distinguer les 3 types d'aides au logement :
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            {housingAidRules2026.distinction.map((item, idx) => (
+              <div key={idx} className="p-3.5 rounded-lg border border-slate-200 bg-slate-50 space-y-1">
+                <span className="font-bold text-slate-900 text-xs block">
+                  {item.code}
+                </span>
+                <p className="text-[11px] text-slate-600 leading-relaxed">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Results */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-lg bg-slate-50 text-center">
-          <div>
-            <span className="text-xs text-slate-500 block">Loyer brut</span>
-            <span className="text-base font-bold text-slate-700">{rent} €</span>
+        {/* Rules for non-EU students since 1 July 2026 */}
+        <div className="p-4 rounded-xl border border-amber-200 bg-amber-50/40 space-y-3">
+          <div className="flex items-center gap-1.5 text-xs font-bold text-amber-900">
+            <span className="material-symbols-outlined text-amber-700 text-[18px]">gavel</span>
+            <span>Conditions d'éligibilité pour les étudiants internationaux non-UE</span>
           </div>
-          <div>
-            <span className="text-xs text-slate-500 block">APL CAF estimée</span>
-            <span className="text-xl font-bold text-emerald-600">~{estimatedApl} €</span>
-          </div>
-          <div>
-            <span className="text-xs text-slate-500 block">Loyer net restant</span>
-            <span className="text-xl font-bold text-blue-700">{netRent} €</span>
-          </div>
-        </div>
-      </div>
 
-      {/* Key Financial Aids */}
-      <div className="space-y-4">
-        <h2 className="text-base font-bold text-slate-900">
-          Les dispositifs d'aide financière en France
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {financialAid.aids.map((aid, idx) => (
+          <p className="text-xs text-slate-700 leading-relaxed">
+            {housingAidRules2026.internationalRules.intro}
+          </p>
+
+          <ul className="text-xs text-slate-800 space-y-1.5 list-disc list-inside bg-white p-3 rounded-lg border border-amber-100">
+            {housingAidRules2026.internationalRules.eligibleCases.map((c, idx) => (
+              <li key={idx} className="font-medium">
+                {c}
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-xs text-slate-600 italic">
+            {housingAidRules2026.internationalRules.caution}
+          </p>
+        </div>
+
+        <div className="text-[11px] text-slate-400 italic pt-1 border-t border-slate-100">
+          {housingAidRules2026.source}
+        </div>
+      </section>
+
+      {/* 3. Scholarships, Emergency Aid & Student Discounts */}
+      <section className="space-y-4">
+        <div>
+          <h2 className="text-base font-bold text-slate-900">
+            Bourses, urgences sociales et réductions étudiantes
+          </h2>
+          <p className="text-xs text-slate-500">
+            Les autres dispositifs légaux d'accompagnement financier en France.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {otherAids.map((aid, idx) => (
             <div
               key={idx}
               className="p-5 rounded-xl border border-slate-200 bg-white flex flex-col justify-between gap-3"
             >
-              <div className="space-y-1">
-                <span className="text-[10px] font-bold text-amber-800 bg-amber-50 px-2 py-0.5 rounded">
-                  {aid.badge}
-                </span>
-                <h3 className="font-bold text-slate-900 text-sm mt-1">
+              <div className="space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-semibold text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
+                    {aid.badge}
+                  </span>
+                </div>
+                <h3 className="font-bold text-slate-900 text-sm">
                   {aid.title}
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {aid.desc}
                 </p>
-                <p className="text-[11px] text-slate-400 mt-1">
-                  <strong>Éligibilité :</strong> {aid.who}
+                <p className="text-xs text-slate-500 pt-1">
+                  <strong>Utile pour :</strong> {aid.usefulFor}
                 </p>
               </div>
 
-              <a
-                href={aid.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-semibold text-blue-600 hover:underline inline-flex items-center gap-1 pt-2 border-t border-slate-100"
-              >
-                <span>En savoir plus</span>
-                <span className="material-symbols-outlined text-[12px]">open_in_new</span>
-              </a>
+              <div className="pt-3 border-t border-slate-100">
+                <a
+                  href={aid.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs font-semibold text-blue-600 hover:underline inline-flex items-center gap-1"
+                >
+                  <span>Accéder à la ressource officielle</span>
+                  <span className="material-symbols-outlined text-[13px]">open_in_new</span>
+                </a>
+              </div>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Monthly Budget Breakdown */}
-      <div className="p-6 rounded-xl border border-slate-200 bg-white space-y-4">
-        <div>
-          <h2 className="text-base font-bold text-slate-900">
-            Budget mensuel moyen d'un étudiant international
-          </h2>
-          <p className="text-xs text-slate-500">
-            Estimation réaliste hors Paris (Nantes, Lyon, Lille, Toulouse, Bordeaux).
-          </p>
-        </div>
-
-        <div className="divide-y divide-slate-100">
-          {financialAid.monthlyBudgetAverage.map((item, idx) => (
-            <div
-              key={idx}
-              className="py-2.5 flex items-center justify-between text-xs"
-            >
-              <span className="text-slate-700">{item.item}</span>
-              <strong className="text-slate-900">{item.amount}</strong>
-            </div>
-          ))}
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

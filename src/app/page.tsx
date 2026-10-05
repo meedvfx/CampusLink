@@ -41,7 +41,7 @@ export default function HomePage() {
               href="/housing"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 bg-white text-slate-700 font-medium text-sm hover:bg-slate-50 transition-colors"
             >
-              <span>Trouver un logement</span>
+              <span>Où chercher un logement</span>
             </Link>
 
             <Link
@@ -55,10 +55,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. Priority Alerts */}
+      {/* 2. Priority 2026 Alerts */}
       <section className="space-y-3">
         <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-          Actions prioritaires à l'arrivée
+          Informations réglementaires prioritaires (2026)
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {alerts.map((alert, index) => (
@@ -78,6 +78,11 @@ export default function HomePage() {
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {alert.desc}
                 </p>
+                {alert.source && (
+                  <p className="text-[11px] text-slate-400 italic pt-1">
+                    {alert.source}
+                  </p>
+                )}
               </div>
 
               <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs">
@@ -168,7 +173,7 @@ export default function HomePage() {
             Tous les modules d'aide
           </h2>
           <p className="text-xs text-slate-500">
-            Accédez directement aux guides thématiques complets et simulateurs.
+            Guides pratiques complets sans publicité ni intermédiaire.
           </p>
         </div>
 
